@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 class AuthResponseModel {
@@ -51,7 +50,7 @@ class User {
   String toJson() => json.encode(toMap());
 
   factory User.fromMap(Map<String, dynamic> json) => User(
-        id: json["id"] ?? 0, // Default value if "id" is missing or null
+        id: json["id"] ?? '', // Default value if "id" is missing or null
         name: json["name"] ?? '',
         email: json["email"] ?? '',
         phone: json["phone"] ?? '',
